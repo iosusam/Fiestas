@@ -1,9 +1,12 @@
 package proyecto.fiestas;
 
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,6 +14,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //localizamos el boton en la vista
+        final Button botonRegistro = (Button)findViewById(R.id.Registro);
+        final Button botonLogin = (Button)findViewById(R.id.Login);
+
+        //creamos los listener de los botones
+        botonRegistro.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                registro();
+            }
+        });
+
+        botonLogin.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                login();
+            }
+        });
+
+
+
+
     }
 
     @Override
@@ -33,5 +57,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void conectarBBDD(){
+        setContentView(R.layout.prueba);
+    }
+    //funcion que contola el login
+    public void login(){
+        setContentView(R.layout.login);
+    }
+    //funcion que controla el registro
+    public void registro(){
+        setContentView(R.layout.registro);
     }
 }
