@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Registro"
-        android:id="@+id/Registro"
+        android:id="@+id/boton_registro_main"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log in"
-        android:id="@+id/Login"
+        android:id="@+id/boton_login_main"
         android:layout_marginTop="75dp"
         android:onClick="R."
         android:layout_below="@+id/textView"
